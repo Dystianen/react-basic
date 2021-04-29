@@ -1,0 +1,16 @@
+.container-fluid{
+    width: 100%;
+}
+
+.vidheader{
+    width: 100%;
+}
+video {
+    width: 100% !important;
+    height: auto;
+}
+.sidebar-wrapper {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
