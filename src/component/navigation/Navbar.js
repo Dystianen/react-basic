@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./Navbar.css";
 import logo from "../../img/logo.png";
 import { Link } from "react-router-dom";
@@ -6,11 +6,12 @@ import { Menu } from "antd";
 import {observer} from "mobx-react-lite";
 import {useStore} from "../../utils/useStore.js";
 
-const navbar = [{}];
 const { subMenu } = Menu;
 export const Navbar = observer((props) => {
   const store = useStore();
-  useEffect(() => {}, [input]);
+  useEffect(() => {}, []);
+
+  const [setKeys, setSetKeys] = useState(["dashbord"]);
 
   return (
     <div>
@@ -30,7 +31,7 @@ export const Navbar = observer((props) => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <Menu
+          {/* <Menu
             defaultOpenKeys={["sub4"]}
             theme="light"
             style={{
@@ -58,7 +59,7 @@ export const Navbar = observer((props) => {
                 <span>About</span>
               </Link>
             </Menu.Item>
-          </Menu>
+          </Menu> */}
         </div>
       </nav>
     </div>

@@ -2,11 +2,8 @@ import {observable, computed} from "mobx";
 import {UI} from "./ui";
 
 export class Store {
-    @observable
-    accessToken = '';
-
-    @observable
-    refreshToken = '';
+    @observable accessToken = '';
+    @observable refreshToken = '';
 
     ui = new UI();
 

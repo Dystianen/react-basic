@@ -1,10 +1,10 @@
 import {action, observable} from "mbox";
 
 export class UI {
-    @observable
+    @observable 
     mediaQuery = {
-        isMobile = false,
-        isDekstop = true,
+        isMobile: false,
+        isDekstop: true,
     };
     @action 
     setMediaQuery(data){
