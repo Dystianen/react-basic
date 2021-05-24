@@ -2,11 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import ReactBootstrap from 'react-bootstrap';
 import './index.css';
-import App from './App.js';
-import Navbar from './component/navigation/Navbar.js';
 import reportWebVitals from './reportWebVitals';
-import Home from "./component/user/Home.js";
-import About from './component/user/About.js';
+import {Home} from "./component/user/Home.js";
 
 ReactDOM.render(
   <React.StrictMode>

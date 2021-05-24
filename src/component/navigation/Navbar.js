@@ -1,17 +1,11 @@
 import React, {useEffect, useState} from "react";
 import "./Navbar.css";
+import "antd/dist/antd.css";
 import logo from "../../img/logo.png";
 import { Link } from "react-router-dom";
 import { Menu } from "antd";
-import {observer} from "mobx-react-lite";
-import {useStore} from "../../utils/useStore.js";
 
-const { subMenu } = Menu;
-export const Navbar = observer((props) => {
-  const store = useStore();
-  useEffect(() => {}, []);
-
-  const [setKeys, setSetKeys] = useState(["dashbord"]);
+export const Navbar = (props) => {
 
   return (
     <div>
@@ -31,39 +25,23 @@ export const Navbar = observer((props) => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          {/* <Menu
-            defaultOpenKeys={["sub4"]}
-            theme="light"
-            style={{
-              backgroundColor: "transparent",
-              fontWeight: 400,
-            }}
-            onClick={({ keyPath, item }) => {
-              props.closeLeftDrawer();
-            }}
-            mode="inline"
-            selectedKeys={setKeys}
-            onSelect={({ setKeys, item, selectedKeys }) =>
-              setSetKeys(selectedKeys)
-            }
-            overflowedIndicator={0}
-            forceSubMenuRender={true}
+          <Menu
           >
             <Menu.Item key="home">
               <Link to={"/home"}>
                 <span>Home</span>
               </Link>
             </Menu.Item>
-            <Menu.Item key="About">
+            <Menu.Item key="about">
               <Link to={"/about"}>
                 <span>About</span>
               </Link>
             </Menu.Item>
-          </Menu> */}
+          </Menu>
         </div>
       </nav>
     </div>
   );
-});
+};
 
 export default Navbar;
